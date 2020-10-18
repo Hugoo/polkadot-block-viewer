@@ -1,6 +1,9 @@
 # Front-End Javascript
 
-https://gitcoin.co/issue/Polkadot-Network/hello-world-by-polkadot/14/100023940
+The frontend is available here:
+https://polkadot-block-viewer.netlify.app
+
+- Link: https://gitcoin.co/issue/Polkadot-Network/hello-world-by-polkadot/14/100023940
 
 ---
 
