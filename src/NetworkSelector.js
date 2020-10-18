@@ -1,55 +1,55 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import {
   Menu,
-  Button,
-  Dropdown,
+  // Button,
+  // Dropdown,
   Container,
-  Icon,
+  // Icon,
   Image,
-  Label,
-  Input,
+  // Label,
+  // Input,
 } from "semantic-ui-react";
 
 import { useSubstrate } from "./substrate-lib";
 
 function Main(props) {
-  const { keyring } = useSubstrate();
-  const { setAccountAddress } = props;
-  const [accountSelected, setAccountSelected] = useState("");
+  // const { keyring } = useSubstrate();
+  // const { setAccountAddress } = props;
+  // const [accountSelected, setAccountSelected] = useState("");
 
-  const keyringOptions = [
-    {
-      key: "wss://rpc.polkadot.io",
-      value: "wss://rpc.polkadot.io",
-      text: "Polkadot",
-    },
-    {
-      key: "wss://kusama-rpc.polkadot.io",
-      value: "wss://kusama-rpc.polkadot.io",
-      text: "Kusama",
-    },
-    {
-      key: "ws://127.0.0.1:9944",
-      value: "ws://127.0.0.1:9944",
-      text: "localhost",
-    },
-  ];
+  // const keyringOptions = [
+  //   {
+  //     key: "wss://rpc.polkadot.io",
+  //     value: "wss://rpc.polkadot.io",
+  //     text: "Polkadot",
+  //   },
+  //   {
+  //     key: "wss://kusama-rpc.polkadot.io",
+  //     value: "wss://kusama-rpc.polkadot.io",
+  //     text: "Kusama",
+  //   },
+  //   {
+  //     key: "ws://127.0.0.1:9944",
+  //     value: "ws://127.0.0.1:9944",
+  //     text: "localhost",
+  //   },
+  // ];
 
-  const initialAddress =
-    keyringOptions.length > 0 ? keyringOptions[0].value : "";
+  // const initialAddress =
+  //  keyringOptions.length > 0 ? keyringOptions[0].value : "";
 
   // Set the initial address
-  useEffect(() => {
-    // setAccountAddress(initialAddress);
-    setAccountSelected(initialAddress);
-  }, [setAccountAddress, initialAddress]);
+  // useEffect(() => {
+  //   // setAccountAddress(initialAddress);
+  //   setAccountSelected(initialAddress);
+  // }, [setAccountAddress, initialAddress]);
 
-  const onChange = (address) => {
-    // Update state with new account address
-    // setAccountAddress(address);
-    setAccountSelected(address);
-  };
+  // const onChange = (address) => {
+  //   // Update state with new account address
+  //   // setAccountAddress(address);
+  //   setAccountSelected(address);
+  // };
 
   return (
     <Menu

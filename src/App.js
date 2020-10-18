@@ -82,7 +82,11 @@ function Main() {
             <Grid.Column textAlign="center">
               <Label color="olive" horizontal>
                 Built by{" "}
-                <a target="_blank" href="https://github.com/Hugoo">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/Hugoo"
+                >
                   @Hugoo
                 </a>
               </Label>

@@ -54,6 +54,7 @@ function BlockInfo(props) {
                   <Table.HeaderCell colSpan="3">
                     <a
                       target="_blank"
+                      rel="noopener noreferrer"
                       href={`https://polkadot.subscan.io/block/${blockInfo.number.toString()}`}
                     >
                       View on subscan
