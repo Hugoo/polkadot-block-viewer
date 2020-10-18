@@ -6,16 +6,18 @@ import {
   Grid,
   Sticky,
   Message,
+  Label,
 } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 
 import { SubstrateContextProvider, useSubstrate } from "./substrate-lib";
 import { DeveloperConsole } from "./substrate-lib/components";
 
-import AccountSelector from "./AccountSelector";
+import NetworkSelector from "./NetworkSelector";
 import BlockNumber from "./BlockNumber";
 import Metadata from "./Metadata";
 import NodeInfo from "./NodeInfo";
+import BlockInfo from "./BlockInfo";
 import TemplateModule from "./TemplateModule";
 
 function Main() {
@@ -60,7 +62,7 @@ function Main() {
   return (
     <div ref={contextRef}>
       <Sticky context={contextRef}>
-        <AccountSelector setAccountAddress={setAccountAddress} />
+        <NetworkSelector setAccountAddress={setAccountAddress} />
       </Sticky>
       <Container>
         <Grid stackable columns="equal">
@@ -70,12 +72,25 @@ function Main() {
             <BlockNumber />
             <BlockNumber finalized />
           </Grid.Row>
-
+          <Grid.Row stretched></Grid.Row>
+          <BlockInfo />
           <Grid.Row>
             <TemplateModule accountPair={accountPair} />
           </Grid.Row>
+          <Grid.Row stretched></Grid.Row>
+          <Grid.Row centered>
+            <Grid.Column textAlign="center">
+              <Label color="olive" horizontal>
+                Built by{" "}
+                <a target="_blank" href="https://github.com/Hugoo">
+                  @Hugoo
+                </a>
+              </Label>
+            </Grid.Column>
+          </Grid.Row>
         </Grid>
       </Container>
+
       <DeveloperConsole />
     </div>
   );
